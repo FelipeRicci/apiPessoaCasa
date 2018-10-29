@@ -1,0 +1,38 @@
+<p>
+  tipo-pessoa-list works!
+</p>
+
+<table border="2">
+  <thead>
+    <tr>
+      <th>Cpf</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Cep</th>
+      <th>Logradouro</th>
+      <th>Numero</th>
+      <th>Complemento</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Uf</th>
+      <th>Acoes</th>
+    </tr>  
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pessoas">
+      <td>{{p.cpf}}</td>
+      <td>{{p.nome}}</td>
+      <td>{{p.email}}</td>
+      <td>{{p.endereco.cep}}</td>
+      <td>{{p.endereco.logradouro}}</td>
+      <td>{{p.endereco.numero}}</td>
+      <td>{{p.endereco.complemento}}</td>
+      <td>{{p.endereco.bairro}}</td>
+      <td>{{p.endereco.cidade}}</td>
+      <td>{{p.endereco.uf}}</td>
+      <td><button routerLink="/tipo-pessoa/create">Editar</button>
+          <button type="submit" (click)="deletarPessoaBanco(p.cpf);">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

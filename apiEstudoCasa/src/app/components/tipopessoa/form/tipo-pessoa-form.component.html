@@ -1,0 +1,50 @@
+<h3>Cadastrar</h3>
+
+<fieldset>
+  <legend>Cadastro de Pessoa</legend>
+  <div>
+    <label>Cpf: </label>
+    <input type="text" [(ngModel)]="pessoa.cpf">
+  </div>
+  <div>
+    <label>Nome: </label>
+    <input type="text" [(ngModel)]="pessoa.nome">
+  </div>
+  <div>
+    <label>Email: </label>
+    <input type="text" [(ngModel)]="pessoa.email">
+  </div>
+</fieldset>
+<fieldset>
+  <legend>Cadastro de Endereco</legend>
+  <div>
+    <label>Cep: </label>
+    <input type="text" [(ngModel)]="pessoa.endereco.cep">
+  </div>
+  <div>
+    <label>Logradouro: </label>
+    <input type="text" [(ngModel)]="pessoa.endereco.logradouro">
+  </div>
+    <label>Numero: </label> 
+    <input type="text" [(ngModel)]="pessoa.endereco.numero">
+  </div>
+  <div>
+    <label>Complemento: </label>
+    <input type="text" [(ngModel)]="pessoa.endereco.complemento">
+  </div>
+  <div>
+    <label>Bairro: </label>
+    <input type="text" [(ngModel)]="pessoa.endereco.bairro">
+  </div>
+  <div>
+    <label>Cidade: </label> 
+    <input type="text" [(ngModel)]="pessoa.endereco.cidade">
+  </div>
+  <div>
+    <label>Uf: </label>
+    <input type="text" [(ngModel)]="pessoa.endereco.uf">
+  </div>
+  <div>
+    <button type="submit" (click)="inserirPessoa();">Salvar</button>
+  </div>
+</fieldset>
